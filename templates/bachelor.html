@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+    <h1>Here are your results!</h1>
+    <p> You would like to see the {{category}} degree</p>
+	
+    <table>
+        <tr>
+            <th>{{category}}</th>
+        </tr>
+        {% for row in {{results}}
+		%}
+        <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+	
+</body>
+</html>

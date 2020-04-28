@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>results.html</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+	
+ <h1>Look at the city with most {{sort_by}}</h1>
+ <p>You are interested in cities' {{sort_by}}</p>
+	
+    <table>
+        <tr>
+            <th>Program</th>
+            <th>University</th>
+			<th>City</th>
+			<th>{{sort_by}}</th>
+        </tr>
+        {% for row in results %}
+        <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+			<td>{{row[2]}}</td>
+			<td>{{row[3]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+	
+	
+</body>
+</html>
